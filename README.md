@@ -14,7 +14,7 @@ mvn test
 
 To launch the application...
 ```
-palindrome % java -jar target/palindrome-1.0-SNAPSHOT-jar-with-dependencies.jar 
+java -jar target/palindrome-1.0-SNAPSHOT-jar-with-dependencies.jar 
 ```
 
 To issue a HTTP request to the application...
