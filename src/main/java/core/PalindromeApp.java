@@ -40,6 +40,9 @@ public class PalindromeApp {
             isPalindrome = checker.isPalindrome(palindrome);
 
             // add palindrome to the cache asynchronously
+            // we are using a single thread executor to do this which is fine
+            // for a production grade system we would probably want some kind of bounded queue
+            // and a writer which writes to disk in batches for maximum performance
             if (isPalindrome) {
                 executor.submit(() -> {
                     cache.add(palindrome);
